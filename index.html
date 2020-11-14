@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tractatus</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div id="container">
+    <div id="level-1" class="levels"></div>
+    <div id="level-2" class="levels"></div>
+    <div id="level-3" class="levels"></div>
+    <div id="level-4" class="levels"></div>
+    <div id="level-5" class="levels"></div>
+    <div id="level-6" class="levels"></div>
+    <div id="level-7" class="levels"></div>
+</div>
+
+</body>
+</html>
+
+
+<style>
+    body {
+        background-image: url('background.jpg');
+        background-size: cover;
+
+    }
+
+    .levels {
+        display: inline-block;
+        width: 300px;
+        height: 100% !important;
+        vertical-align: top;
+        overflow-y: scroll;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
+
+    body {
+        width: 2500px;
+        font-family: Baskerville;
+        font-size: 12pt;
+        height: 98vh;
+        margin: 1vh 0 0 1vh;
+        overflow-y: hidden;
+    }
+
+    #container {
+        width: 100%;
+        height: 98%;
+    }
+
+    .proposition {
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid rgba(45, 43, 47, 0.98);
+        border-radius: 0;
+    }
+
+    .hasChildren:hover{
+        background: rgba(93, 93, 98, 0.2);
+    }
+
+    .highlighted {
+        background-color: rgba(253, 244, 255, 0.25);
+    }
+
+    .proposition:hover{
+        background-color: rgba(219, 215, 217, 0.28);
+    }
+
+    .propositionHeader {
+        width: 100%;
+    }
+
+    .key {
+        display: inline-block;
+    }
+
+    .emptiness {
+        float: right;
+        display: inline-block;
+
+    }
+
+    .nonHighlighted {
+        color: #c5bec4;
+        border: 1px solid azure;
+    }
+
+    .hasChildren {
+        cursor: pointer;
+    }
+</style>
