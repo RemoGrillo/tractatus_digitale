@@ -3,15 +3,15 @@ $(document).ready(function(){
     $.getJSON( "tractatus.json" , function( result ){
         tractatus = result;
         //Add first propositions
-        addPropositionsToLevel("0")
+        addPropositionsToLevel("0");
+        $('.content_en').show();
+        $('.content_de').hide();
     });
 
     $(document).on('click', '.hasChildren', function(){
         clickOnProposition($(this))
     });
 
-    $('.content_en').show();
-    $('.content_de').hide();
 
     var switchButton 			= document.querySelector('.switch-button');
     var switchBtnRight 			= document.querySelector('.switch-button-case.right');
