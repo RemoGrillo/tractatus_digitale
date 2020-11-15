@@ -5,6 +5,10 @@
     <title>Tractatus</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src=""></script>
 </head>
 <body>
 <div id="container">
@@ -14,7 +18,17 @@
     <div id="level-4" class="levels"></div>
     <div id="level-5" class="levels"></div>
     <div id="level-6" class="levels"></div>
-    <div id="level-7" class="levels"></div>
+    <div id="sidebar">
+        <h1 id="sidebarTitle">Tractatus Digitale</h1>
+        <h5 id="sidebarSubtitle">A digital edition of Tractatus Logico-Philosophicus by Ludwig Wittgenstein.</h5>
+
+
+        <div class="switch-button">
+            <span class="active"></span>
+            <button class="switch-button-case left active-case">English</button>
+            <button class="switch-button-case right">Deutsch</button>
+        </div>
+    </div>
 </div>
 
 </body>
@@ -22,11 +36,12 @@
 
 
 <style>
+    /*
     body {
         background-image: url('background.jpg');
         background-size: cover;
-
     }
+    */
 
     .levels {
         display: inline-block;
@@ -41,7 +56,6 @@
     }
 
     body {
-        width: 2500px;
         font-family: Baskerville;
         font-size: 12pt;
         height: 98vh;
@@ -70,7 +84,7 @@
     }
 
     .proposition:hover{
-        background-color: rgba(219, 215, 217, 0.28);
+        background-color: rgba(215, 211, 213, 0.28);
     }
 
     .propositionHeader {
@@ -89,10 +103,34 @@
 
     .nonHighlighted {
         color: #c5bec4;
-        border: 1px solid azure;
+        border: 1px solid #c7c3c5;
     }
 
     .hasChildren {
         cursor: pointer;
+    }
+
+    #sidebar {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 300px;
+        background-color: black;
+        color: white !important;
+        height: 100%;
+        padding: 10px;
+    }
+
+    #sidebarTitle {
+        font-family: 'Work Sans', sans-serif;
+        text-align: center;
+        font-size: 28pt;
+        font-weight: lighter;
+    }
+
+    #sidebarSubtitle {
+        font-family: 'Work Sans', sans-serif;
+        text-align: center;
+        font-weight: lighter;
     }
 </style>
