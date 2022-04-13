@@ -1,13 +1,17 @@
 # Tractatus Digitale
 An interactive bi-dimensional digital edition of the Tractatus Logico-Philosophicus by Ludwig Wittgenstein.
 
+Try it here:
+https://remogrillo.github.io/tractatus_digitale/
+
 ### About the book
 This twentieth-century masterpiece of meta-philosophy striked me in the same amount for its content and its form.
 Behind the apparently-linear form of the book (behind the often oversighted proposition numbers) there is a wonderful architecture of logical beauty and of exegetical importance.
 Each and every proposition fits into a precise spot within a tree-like hierarchical structure, where it can have a parent proposition, siblings, children.
+
 Every relation of this kind is of fundamental importance.
 Many relations, in the linearity of the book version, are lost.
-(Nonetheless, the mono-dimensional form of the book shows false connections.)
+(Furthermore, the mono-dimensional form of the book exhibits dozens of misleading connections.)
 
 ### This Digital Version
 

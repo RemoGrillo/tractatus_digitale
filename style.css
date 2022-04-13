@@ -88,7 +88,9 @@ body {
 }
 
 .proposition {
-    margin: 5px;
+    margin: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
     border: 1px solid rgba(45, 43, 47, 0.98);
     border-radius: 0;
 }
