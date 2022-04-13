@@ -61,7 +61,7 @@ function clickOnProposition(clicked){
         addPropositionsToLevel($(clicked).attr('pnum'));
         highlightProposition(clicked);
     }
-    switch_to_language("en");
+    switch_to_language(language);
 }
 
 function highlightProposition(clicked){
