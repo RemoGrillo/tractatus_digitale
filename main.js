@@ -1,11 +1,22 @@
 var tractatus;
+language = "en";
+
+function switch_to_language(language){
+    if(language == "en"){
+        $('.content_en').show();
+        $('.content_de').hide();
+    } else {
+        $('.content_en').hide();
+        $('.content_de').show();
+    }
+}
+
 $(document).ready(function(){
     $.getJSON( "tractatus.json" , function( result ){
         tractatus = result;
         //Add first propositions
         addPropositionsToLevel("0");
-        $('.content_en').show();
-        $('.content_de').hide();
+        switch_to_language("en");
     });
 
     $(document).on('click', '.hasChildren', function(){
@@ -21,17 +32,17 @@ $(document).ready(function(){
     function switchLeft(){
         switchBtnRight.classList.remove('active-case');
         switchBtnLeft.classList.add('active-case');
-        activeSwitch.style.left 						= '0%';
-        $('.content_en').show();
-        $('.content_de').hide();
+        activeSwitch.style.left = '0%';
+        language = "en";
+        switch_to_language(language);
     }
 
     function switchRight(){
         switchBtnRight.classList.add('active-case');
         switchBtnLeft.classList.remove('active-case');
-        activeSwitch.style.left 						= '50%';
-        $('.content_en').hide();
-        $('.content_de').show();
+        activeSwitch.style.left = '50%';
+        language = "de";
+        switch_to_language(language);
     }
 
     switchBtnLeft.addEventListener('click', function(){
@@ -46,11 +57,11 @@ $(document).ready(function(){
 
 function clickOnProposition(clicked){
     if($(clicked).hasClass("highlighted")){
-
     } else {
         addPropositionsToLevel($(clicked).attr('pnum'));
         highlightProposition(clicked);
     }
+    switch_to_language("en");
 }
 
 function highlightProposition(clicked){
@@ -110,7 +121,7 @@ function addPropositionsToLevel(clickedProposition){
             hasChildren = "hasChildren";
         }
 
-        let proposition = "<div class='proposition " + hasChildren + "' pnum='"+ v.key +"'><div class='propositionHeader'><div class='key'>"+ v.key +"</div><div class='emptiness'>"+ emptiness +"</div></div><div class='content_en'>" + content_en + "</div><div class='content_de'>"+ content_de +"</div></div>";
+        let proposition = "<div class='proposition " + hasChildren + "' pnum='"+ v.key +"'><div class='propositionHeader'><div class='key'>"+ v.key +"</div><div class='emptiness'>"+ emptiness +"</div></div><div class='content_en proposition_content'>" + content_en + "</div><div class='content_de proposition_content'>"+ content_de +"</div></div>";
         $(proposition).hide().appendTo('#level-' + nextlevel).fadeIn(500);
     })
 }
